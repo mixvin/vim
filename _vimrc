@@ -64,4 +64,4 @@ let g:syntastic_auto_loc_list=1
 let g:ConqueTerm_SessionSupport = 1
 let g:ConqueTerm_ReadUnfocused = 1
 let g:ConqueTerm_CWInsert = 1
-let g:ConqueTerm_PyExe = '\tools\Python27'
+"let g:ConqueTerm_PyExe = '\tools\Python27'
