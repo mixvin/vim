@@ -19,6 +19,7 @@ winsize 200 51
 
 nmap <F9> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+nmap <F7> :BuffergatorToggle<CR>
 
 let g:tagbar_ctags_bin = $VIM."\\tools\\ctags58\\ctags.exe"
 let g:NERDTreeWinSize = 50
@@ -53,7 +54,10 @@ Bundle 'mixvin/Conque-Shell'
 "Bundle 'Shougo/vimproc'
 Bundle 'kien/ctrlp.vim'
 Bundle 'michalliu/jsruntime.vim'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
+Bundle 'vim-scripts/Windows-PowerShell-Syntax-Plugin'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'vim-scripts/actionscript.vim--Cuss'
 filetype plugin indent on
 
 "Syntastic
@@ -65,3 +69,10 @@ let g:ConqueTerm_SessionSupport = 1
 let g:ConqueTerm_ReadUnfocused = 1
 let g:ConqueTerm_CWInsert = 1
 let g:ConqueTerm_PyExe = '\tools\Python27'
+
+"actionscript.vim
+au Bufread,BufNewFile *.as set filetype=actionscript
+
+"Buffergator
+let g:buffergator_viewport_split_policy = "R"
+let g:buffergator_autoexpand_on_split = 0
