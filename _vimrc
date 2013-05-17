@@ -76,3 +76,7 @@ au Bufread,BufNewFile *.as set filetype=actionscript
 "Buffergator
 let g:buffergator_viewport_split_policy = "R"
 let g:buffergator_autoexpand_on_split = 0
+
+"CtrlP
+let g:ctrlp_root_markers = ['Sources']
+let g:ctrlp_custom_ignore = { 'dir': '\v(packages|bin|obj)$' }
