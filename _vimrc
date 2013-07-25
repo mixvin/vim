@@ -24,7 +24,7 @@ nmap <F7> :BuffergatorToggle<CR>
 let g:tagbar_ctags_bin = $VIM."\\tools\\ctags58\\ctags.exe"
 let g:NERDTreeWinSize = 50
 
-set guioptions=gt
+set guioptions=gtb
 
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%#error#%{StatuslineTabWarning()}%{StatuslineTrailingSpaceWarning()}%*%=[buff:%n]%c,%l/%L\ %P\ [%{strftime('%c')}]
 
@@ -58,6 +58,12 @@ Bundle 'michalliu/jsruntime.vim'
 Bundle 'vim-scripts/Windows-PowerShell-Syntax-Plugin'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'vim-scripts/actionscript.vim--Cuss'
+Bundle 'StrayFeral/DevLife'
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-misc'
+Bundle 'PAntoine/TimeKeeper'
+Bundle 'PAntoine/vimgitlog'
+Bundle 'jceb/vim-orgmode'
 filetype plugin indent on
 
 "Syntastic
@@ -80,3 +86,6 @@ let g:buffergator_autoexpand_on_split = 0
 "CtrlP
 let g:ctrlp_root_markers = ['Sources']
 let g:ctrlp_custom_ignore = { 'dir': '\v(packages|bin|obj)$' }
+
+"vim-session
+let g:session_autosave = 'no'
