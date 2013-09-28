@@ -44,7 +44,7 @@ set rtp+=$VIM/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
-Bundle 'mixvin/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/vimwiki'
 Bundle 'majutsushi/tagbar'
 Bundle 'dbext.vim'
@@ -59,12 +59,18 @@ Bundle 'vim-scripts/Windows-PowerShell-Syntax-Plugin'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'vim-scripts/actionscript.vim--Cuss'
 Bundle 'StrayFeral/DevLife'
-Bundle 'xolox/vim-session'
-Bundle 'xolox/vim-misc'
 Bundle 'PAntoine/TimeKeeper'
 Bundle 'PAntoine/vimgitlog'
 Bundle 'jceb/vim-orgmode'
 Bundle 'sjl/gundo.vim'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'rhysd/clever-f.vim'
+Bundle 'rhysd/open-pdf.vim'
+"Bundle 'actionshrimp/vim-xpath'
+Bundle 'wesleyche/SrcExpl'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-easytags'
 
 filetype plugin indent on
 
@@ -86,8 +92,30 @@ let g:buffergator_viewport_split_policy = "R"
 let g:buffergator_autoexpand_on_split = 0
 
 "CtrlP
-let g:ctrlp_root_markers = ['Sources']
+let g:ctrlp_root_markers = ['Sources', 'trunc']
 let g:ctrlp_custom_ignore = { 'dir': '\v(packages|bin|obj)$' }
 
 "vim-session
 let g:session_autosave = 'no'
+
+"open-pdf
+let g:pdf_convert_on_edit = 1
+
+"SrcExpl
+nmap <F6> :SrcExplToggle<CR>
+let g:SrcExpl_winHeight = 8
+let g:SrcExpl_refreshTime = 100
+let g:SrcExpl_jumpKey = "<ENTER>"
+let g:SrcExpl_gobackKey = "<SPACE>"
+let g:SrcExpl_pluginList = [ 
+        \ "__Tag_List__", 
+        \ "_NERD_tree_", 
+        \ "Source_Explorer" 
+    \ ] 
+let g:SrcExpl_searchLocalDef = 1
+let g:SrcExpl_prevDefKey = "<F3>" 
+let g:SrcExpl_nextDefKey = "<F4>" 
+let g:SrcExpl_isUpdateTags = 0
+
+"easytags
+let g:easytags_cmd = "/ctags58/ctags"
