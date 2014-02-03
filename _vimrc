@@ -21,12 +21,22 @@ nmap <F9> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <F7> :BuffergatorToggle<CR>
 
+imap <C-j> <Down>
+cmap <C-j> <Down>
+imap <C-k> <Up>
+cmap <C-k> <Up>
+imap <C-h> <Left>
+cmap <C-h> <Left>
+imap <C-l> <Right>
+cmap <C-l> <Right>
+imap jj <Esc>
+
 let g:tagbar_ctags_bin = $VIM."\\tools\\ctags58\\ctags.exe"
 let g:NERDTreeWinSize = 50
 
 set guioptions=gtb
 
-set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%#error#%{StatuslineTabWarning()}%{StatuslineTrailingSpaceWarning()}%*%=[buff:%n]%c,%l/%L\ %P\ [%{strftime('%c')}]
+set statusline=%f[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%#error#%{StatuslineTabWarning()}%{StatuslineTrailingSpaceWarning()}%*%=[buff:%n]%c,%l/%L\ %P\ [%{strftime('%c')}]
 
 set laststatus=2
 
@@ -82,7 +92,8 @@ let g:syntastic_auto_loc_list=1
 let g:ConqueTerm_SessionSupport = 1
 let g:ConqueTerm_ReadUnfocused = 1
 let g:ConqueTerm_CWInsert = 1
-let g:ConqueTerm_PyExe = '\tools\Python27'
+let g:ConqueTerm_Color = 1
+let g:ConqueTerm_ReadUnfocused = 1
 
 "actionscript.vim
 au Bufread,BufNewFile *.as set filetype=actionscript
