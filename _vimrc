@@ -3,6 +3,8 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
+nunmap <C-a>
+
 set guifont=Consolas:h10:cRUSSIAN
 set nu
 colorscheme darkblue
@@ -16,6 +18,8 @@ set lines=55 columns=170
 set langmap=ёйцукенгшщзхъфывапролджэячсмитью;`qwertyuiop[]asdfghjkl\;'zxcvbnm.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>
 winpos 150 0
 winsize 200 51
+
+set wildmode=list,full
 
 nmap <F9> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
@@ -31,7 +35,7 @@ imap <C-l> <Right>
 cmap <C-l> <Right>
 imap jj <Esc>
 
-let g:tagbar_ctags_bin = $VIM."\\tools\\ctags58\\ctags.exe"
+let g:tagbar_ctags_bin = "C:\\Utils\\ctags58\\ctags.exe"
 let g:NERDTreeWinSize = 50
 
 set guioptions=gtb
@@ -74,7 +78,7 @@ Plugin 'PAntoine/vimgitlog'
 Plugin 'jceb/vim-orgmode'
 Plugin 'sjl/gundo.vim'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'rhysd/clever-f.vim'
+"Plugin 'rhysd/clever-f.vim'
 Plugin 'rhysd/open-pdf.vim'
 "Plugin 'actionshrimp/vim-xpath'
 Plugin 'wesleyche/SrcExpl'
@@ -104,7 +108,7 @@ let g:buffergator_viewport_split_policy = "R"
 let g:buffergator_autoexpand_on_split = 0
 
 "CtrlP
-let g:ctrlp_root_markers = ['Sources', 'trunc']
+let g:ctrlp_root_markers = ['Sources', 'trunk']
 let g:ctrlp_custom_ignore = { 'dir': '\v(packages|bin|obj)$' }
 
 "vim-session
