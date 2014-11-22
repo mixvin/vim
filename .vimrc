@@ -9,8 +9,8 @@ colorscheme darkblue
 set fileencodings=utf-8,default
 set fileencoding=utf-8
 set nowrap
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
-set lines=55 columns=170
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+set lines=50 columns=170
 set langmap=ёйцукенгшщзхъфывапролджэячсмитью;`qwertyuiop[]asdfghjkl\;'zxcvbnm.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>
 set wildmode=list,full
 set guioptions=gtb
@@ -19,6 +19,8 @@ hi StatusLine ctermfg=0
 set laststatus=2
 set listchars=tab:»·,trail:·,nbsp:·
 set path=.,,**
+set backupdir=~/.vim/swp
+set directory=~/.vim/swp
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -32,3 +34,5 @@ call vundle#end()
 filetype plugin indent on
 
 nmap <F9> :NERDTreeToggle<CR>
+
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
